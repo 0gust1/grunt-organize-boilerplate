@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     var configLocations;
     var tasksLocations;
 
-    /** External configuration management **/
+    /** External configuration loading and merging **/
 
     var configFiles;
     var env = process.env.NODE_ENV || 'dev';
@@ -73,10 +73,9 @@ module.exports = function (grunt) {
         require(path)(grunt);
     });
 
-
     //write the generated configuration (for debug)
     grunt.registerTask('logConfig', 'Output the generated configuration object', function () {
-        grunt.log.subhead('* Generated config file: *');
+        grunt.log.subhead('* Generated config file : *');
         grunt.log.writeln(JSON.stringify(config, undefined, 2));
     });
 

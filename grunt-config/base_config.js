@@ -1,6 +1,6 @@
 module.exports = function (grunt, env) {
 
-    var defaults = config = {
+    var config = {
 
         //Load grunt-plugins from package.json
         pkg: grunt.file.readJSON('package.json'),
@@ -10,7 +10,7 @@ module.exports = function (grunt, env) {
                 // JSHInt with a better reporter
                 reporter: require('jshint-stylish')
             },
-            //vérification du gruntfile
+            //gruntfile linting
             gruntfile: {
                 src: ['Gruntfile.js']
             }
